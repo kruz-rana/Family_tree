@@ -1,0 +1,49 @@
+# Base URL
+@baseUrl=http://localhost:3005/api/person
+
+### Get all root members
+GET {{baseUrl}}/
+
+###
+
+### Get details of a person by ID
+GET {{baseUrl}}/view/648aef01234567890abcdef0
+
+###
+
+### Add a new family member (root member)
+POST {{baseUrl}}/add
+Content-Type: multipart/form-data
+
+# Body
+# Root member without a parentId
+{
+    "name": "Alice Johnson",
+    "dob": "1980-05-10"
+}
+@file photo=@C:\Users\KRUNAL RANA\OneDrive\Pictures\Screenshots\Screenshot (353).png
+
+###
+
+### Add a new family member (with a parentId)
+POST {{baseUrl}}/add
+Content-Type: multipart/form-data
+
+# Body
+# Child of the person with ID "648aef01234567890abcdef0"
+{
+    "name": "Bob Johnson",
+    "dob": "2005-09-15",
+    "parentId": "648aef01234567890abcdef0"
+}
+@file photo=@C:/Users/YourUsername/Photos/bob.jpg
+
+###
+
+### Delete a family member
+POST {{baseUrl}}/delete
+Content-Type: application/json
+
+{
+    "id": "648aef11234567890abcdef1"
+}
