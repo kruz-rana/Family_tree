@@ -18,8 +18,8 @@ Content-Type: multipart/form-data
 # Body
 # Root member without a parentId
 {
-    "name": "Alice Johnson",
-    "dob": "1980-05-10"
+    "name": "Krunal Rana",
+    "dob": "2001-11-06"
 }
 @file photo=@C:\Users\KRUNAL RANA\OneDrive\Pictures\Screenshots\Screenshot (353).png
 

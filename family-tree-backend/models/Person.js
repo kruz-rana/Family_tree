@@ -15,4 +15,4 @@ personSchema.virtual('children', {
 
 personSchema.set('toJSON', { virtuals: true });
 
-module.exports = mongoose.model('Person', personSchema);
+module.exports = mongoose.model('person', personSchema);
